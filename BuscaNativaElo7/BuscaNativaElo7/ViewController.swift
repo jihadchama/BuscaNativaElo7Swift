@@ -1,6 +1,10 @@
+import Alamofire
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+	
+	private var dataSource: [ProductCardModel] = []
 	
 	private let collectionView = UICollectionView(
 		frame: .zero,
@@ -9,6 +13,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		self.getProducts(url: "https://5dc05c0f95f4b90014ddc651.mockapi.io/elo7/api/1/products")
+
 		collectionView.register(SearchCollectionViewCell.self,
 								forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
 		collectionView.delegate = self
@@ -22,11 +29,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 12
+		return dataSource.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.identifier, for: indexPath)
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.identifier, for: indexPath) as! SearchCollectionViewCell
+		cell.render(productCardModel: dataSource[indexPath.item])
 		return cell
 	}
 	
@@ -49,7 +57,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		collectionView.deselectItem(at: indexPath, animated: true)
-		print("Selected section \(indexPath.section) and row \(indexPath.row)")
+		let productURL = dataSource[indexPath.item].link
+		let webView = SFSafariViewController.init(url: URL(string: productURL)!)
+		self.present(webView, animated: true)
 	}
 }
 
+extension ViewController {
+	
+	func getProducts(url: String) {
+		AF.request(url)
+			.validate()
+			.responseDecodable(of: [ProductCardModel].self) { response in
+				guard let products = response.value else { return }
+				self.dataSource = products
+				self.collectionView.reloadData()
+		}
+	}
+}

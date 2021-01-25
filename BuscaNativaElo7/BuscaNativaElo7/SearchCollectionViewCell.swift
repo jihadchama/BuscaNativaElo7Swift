@@ -6,27 +6,25 @@ class SearchCollectionViewCell: UICollectionViewCell {
 	
 	private let productCard: ProductCard = {
 		let productCard = ProductCard()
-		productCard.titleLabel.text = "Título do Produto"
-		productCard.installmentLabel.text = "10x R$ 66,66 sem juros"
-		productCard.currentLabel.text = "R$ 666,66"
-		productCard.nonPromotionalLabel.text = "R$ 777,77"
 		return productCard
 	}()
+	
+	func render(productCardModel: ProductCardModel) {
+		productCard.titleLabel.text = productCardModel.title
+		productCard.currentLabel.text = productCardModel.price.current
+		productCard.productImage.load(url: productCardModel.picture)
+		if let installment = productCardModel.price.installment {
+			productCard.installmentLabel.text = installment
+		}
+		
+		if let nonPromotional =  productCardModel.price.nonPromotional {
+			productCard.nonPromotionalLabel.text = nonPromotional
+		}
+	}
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		contentView.addSubview(productCard)
-		
-		let image = [
-			UIImage(named: "placeholder-1"),
-			UIImage(named: "placeholder-2"),
-			UIImage(named: "placeholder-3"),
-			UIImage(named: "placeholder-4"),
-			UIImage(named: "placeholder-5"),
-			UIImage(named: "placeholder-6"),
-		].compactMap({ $0 })
-		
-		productCard.productImage.image = image.randomElement()
 	}
 	
 	required init?(coder: NSCoder) {

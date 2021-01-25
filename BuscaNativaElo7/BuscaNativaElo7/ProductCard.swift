@@ -88,3 +88,18 @@ class ProductCard: UIView {
 		fatalError()
 	}
 }
+
+extension UIImageView {
+	func load(url: String) {
+		let imageURL = URL(string: url)!
+		DispatchQueue.global().async { [weak self] in
+			if let data = try? Data(contentsOf: imageURL) {
+				if let image = UIImage(data: data) {
+					DispatchQueue.main.async {
+						self?.image = image
+					}
+				}
+			}
+		}
+	}
+}
