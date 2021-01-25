@@ -16,6 +16,8 @@
 		8B0AE75825BF0DF300889DE7 /* ProductCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */; };
 		8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */; };
 		8B0AE75F25BF107300889DE7 /* SearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75E25BF107300889DE7 /* SearchClient.swift */; };
+		8B61885F25BF221F00787062 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */; };
+		8B61886225BF234B00787062 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61886125BF234B00787062 /* ProductCard.swift */; };
 		8EEF2A600C49719DE1A9F98A /* Pods_BuscaNativaElo7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7B29688DA28D9CB605EA89 /* Pods_BuscaNativaElo7.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardModel.swift; sourceTree = "<group>"; };
 		8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		8B0AE75E25BF107300889DE7 /* SearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClient.swift; sourceTree = "<group>"; };
+		8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B61886125BF234B00787062 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				8B0AE74D25BF0DC100889DE7 /* LaunchScreen.storyboard */,
 				8B0AE75025BF0DC100889DE7 /* Info.plist */,
 				8B0AE75E25BF107300889DE7 /* SearchClient.swift */,
+				8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */,
+				8B61886125BF234B00787062 /* ProductCard.swift */,
 			);
 			path = BuscaNativaElo7;
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 				8B0AE75F25BF107300889DE7 /* SearchClient.swift in Sources */,
 				8B0AE74325BF0DC000889DE7 /* AppDelegate.swift in Sources */,
 				8B0AE74525BF0DC000889DE7 /* SceneDelegate.swift in Sources */,
+				8B61885F25BF221F00787062 /* SearchCollectionViewCell.swift in Sources */,
 				8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */,
+				8B61886225BF234B00787062 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
