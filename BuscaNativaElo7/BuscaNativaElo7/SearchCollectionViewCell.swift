@@ -18,7 +18,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 		}
 		
 		if let nonPromotional =  productCardModel.price.nonPromotional {
-			productCard.nonPromotionalLabel.text = nonPromotional
+			productCard.nonPromotionalLabel.attributedText = NSAttributedString(string: nonPromotional, attributes: [NSAttributedString.Key.strikethroughStyle: 1])
 		}
 	}
 	

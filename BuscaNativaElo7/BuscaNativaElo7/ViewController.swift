@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 								forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
 		collectionView.delegate = self
 		collectionView.dataSource = self
+		collectionView.backgroundColor = UIColor(red: 244/255, green: 245/255, blue: 247/255, alpha: 1)
 		view.addSubview(collectionView)
 	}
 	
@@ -39,20 +40,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: (view.frame.size.width/2)-2,
-					  height: 236)
+		return CGSize(width: 185, height: 286)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-		return 1
+		return 10
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 1
+		return 10
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-		return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+		return UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

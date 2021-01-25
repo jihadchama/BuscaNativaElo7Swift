@@ -10,28 +10,28 @@ class ProductCard: UIView {
 	
 	lazy var titleLabel: UILabel = {
 		let label = UILabel()
-		label.font = .systemFont(ofSize: 12)
+		label.font = .systemFont(ofSize: 16)
 		label.textColor = .darkGray
 		return label
 	}()
 	
 	lazy var nonPromotionalLabel: UILabel = {
 		let label = UILabel()
-		label.font = .systemFont(ofSize: 10)
+		label.font = .systemFont(ofSize: 14)
 		label.textColor = .darkGray
 		return label
 	}()
 	
 	lazy var currentLabel: UILabel = {
 		let label = UILabel()
-		label.font = .systemFont(ofSize: 16)
+		label.font = .boldSystemFont(ofSize: 20)
 		label.textColor = .darkGray
 		return label
 	}()
 	
 	lazy var installmentLabel: UILabel = {
 		let label = UILabel()
-		label.font = .systemFont(ofSize: 10)
+		label.font = .systemFont(ofSize: 14)
 		label.textColor = .darkGray
 		return label
 	}()
@@ -41,7 +41,7 @@ class ProductCard: UIView {
 			make.left.equalToSuperview()
 			make.right.equalToSuperview()
 			make.top.equalToSuperview()
-			make.height.equalTo(140)
+			make.height.equalTo(185)
 		}
 		
 		titleLabel.snp.makeConstraints { make in
@@ -77,9 +77,17 @@ class ProductCard: UIView {
 		addSubview(installmentLabel)
 	}
 	
+	fileprivate func addShadowToProductCard() {
+		self.layer.shadowColor = UIColor.gray.cgColor
+		self.layer.shadowOpacity = 0.5
+		self.layer.shadowOffset = CGSize(width: 0, height: 2)
+	}
+	
 	override init(frame: CGRect) {
-		super.init(frame: CGRect(x: 0, y: 0, width: 140, height: 236))
+		super.init(frame: CGRect(x: 0, y: 0, width: 185, height: 281))
 		self.backgroundColor = .white
+		
+		addShadowToProductCard()
 		addSubviews()
 		constraints()
 	}
