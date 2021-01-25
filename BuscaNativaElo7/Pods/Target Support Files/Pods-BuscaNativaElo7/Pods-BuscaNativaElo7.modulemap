@@ -1,0 +1,6 @@
+framework module Pods_BuscaNativaElo7 {
+  umbrella header "Pods-BuscaNativaElo7-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,7 +1,7 @@
 struct ProductCardModel: Codable {
 	var title: String
 	var price: PriceModel
-	var id: Int
+	var id: String
 	var link: String
 	var picture: String
 	

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,14 @@
 		8B0AE74F25BF0DC100889DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AE74D25BF0DC100889DE7 /* LaunchScreen.storyboard */; };
 		8B0AE75825BF0DF300889DE7 /* ProductCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */; };
 		8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */; };
+		8B0AE75F25BF107300889DE7 /* SearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75E25BF107300889DE7 /* SearchClient.swift */; };
+		8EEF2A600C49719DE1A9F98A /* Pods_BuscaNativaElo7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7B29688DA28D9CB605EA89 /* Pods_BuscaNativaElo7.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3587F12C478534FE11640EE2 /* Pods-BuscaNativaElo7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuscaNativaElo7.release.xcconfig"; path = "Target Support Files/Pods-BuscaNativaElo7/Pods-BuscaNativaElo7.release.xcconfig"; sourceTree = "<group>"; };
+		4E7B29688DA28D9CB605EA89 /* Pods_BuscaNativaElo7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuscaNativaElo7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5016DD381AF542C90CB01D73 /* Pods-BuscaNativaElo7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuscaNativaElo7.debug.xcconfig"; path = "Target Support Files/Pods-BuscaNativaElo7/Pods-BuscaNativaElo7.debug.xcconfig"; sourceTree = "<group>"; };
 		8B0AE73F25BF0DC000889DE7 /* BuscaNativaElo7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuscaNativaElo7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0AE74225BF0DC000889DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B0AE74425BF0DC000889DE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		8B0AE75025BF0DC100889DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardModel.swift; sourceTree = "<group>"; };
 		8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
+		8B0AE75E25BF107300889DE7 /* SearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEF2A600C49719DE1A9F98A /* Pods_BuscaNativaElo7.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DE419AF5737FDD86B7DAD18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E7B29688DA28D9CB605EA89 /* Pods_BuscaNativaElo7.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B0AE73625BF0DC000889DE7 = {
 			isa = PBXGroup;
 			children = (
 				8B0AE74125BF0DC000889DE7 /* BuscaNativaElo7 */,
 				8B0AE74025BF0DC000889DE7 /* Products */,
+				E66D8B91D489EE944D09E154 /* Pods */,
+				5DE419AF5737FDD86B7DAD18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +85,7 @@
 				8B0AE74B25BF0DC100889DE7 /* Assets.xcassets */,
 				8B0AE74D25BF0DC100889DE7 /* LaunchScreen.storyboard */,
 				8B0AE75025BF0DC100889DE7 /* Info.plist */,
+				8B0AE75E25BF107300889DE7 /* SearchClient.swift */,
 			);
 			path = BuscaNativaElo7;
 			sourceTree = "<group>";
@@ -81,6 +99,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		E66D8B91D489EE944D09E154 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5016DD381AF542C90CB01D73 /* Pods-BuscaNativaElo7.debug.xcconfig */,
+				3587F12C478534FE11640EE2 /* Pods-BuscaNativaElo7.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B0AE75325BF0DC100889DE7 /* Build configuration list for PBXNativeTarget "BuscaNativaElo7" */;
 			buildPhases = (
+				4DF4B5738C6C77D005D30513 /* [CP] Check Pods Manifest.lock */,
 				8B0AE73B25BF0DC000889DE7 /* Sources */,
 				8B0AE73C25BF0DC000889DE7 /* Frameworks */,
 				8B0AE73D25BF0DC000889DE7 /* Resources */,
+				91D3FEA44AAC2D301FEDC89D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +175,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DF4B5738C6C77D005D30513 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuscaNativaElo7-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91D3FEA44AAC2D301FEDC89D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuscaNativaElo7/Pods-BuscaNativaElo7-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BuscaNativaElo7/Pods-BuscaNativaElo7-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BuscaNativaElo7/Pods-BuscaNativaElo7-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8B0AE73B25BF0DC000889DE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,6 +224,7 @@
 			files = (
 				8B0AE74725BF0DC000889DE7 /* ViewController.swift in Sources */,
 				8B0AE75825BF0DF300889DE7 /* ProductCardModel.swift in Sources */,
+				8B0AE75F25BF107300889DE7 /* SearchClient.swift in Sources */,
 				8B0AE74325BF0DC000889DE7 /* AppDelegate.swift in Sources */,
 				8B0AE74525BF0DC000889DE7 /* SceneDelegate.swift in Sources */,
 				8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */,
@@ -299,6 +371,7 @@
 		};
 		8B0AE75425BF0DC100889DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5016DD381AF542C90CB01D73 /* Pods-BuscaNativaElo7.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +391,7 @@
 		};
 		8B0AE75525BF0DC100889DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3587F12C478534FE11640EE2 /* Pods-BuscaNativaElo7.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
