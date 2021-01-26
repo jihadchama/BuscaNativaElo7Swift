@@ -2,28 +2,66 @@ import Alamofire
 import UIKit
 import SafariServices
 
-class SearchCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SearchViewController: UIViewController {
+	
+	private let kProductsURL = "https://5dc05c0f95f4b90014ddc651.mockapi.io/elo7/api/1/products"
 	
 	private var dataSource: [ProductCardModel] = []
 	
-	private let collectionView = SearchCollectionView()
-
+	private let searchBar =	SearchBar()
+	
+	private let collectionView = UICollectionView(frame: .zero,
+												  collectionViewLayout: UICollectionViewFlowLayout())
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		self.getProducts(url: "https://5dc05c0f95f4b90014ddc651.mockapi.io/elo7/api/1/products")
-
-		collectionView.register(SearchCollectionViewCell.self,
-								forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
-		collectionView.delegate = self
-		collectionView.dataSource = self
-		collectionView.backgroundColor = UIColor(red: 244/255, green: 245/255, blue: 247/255, alpha: 1)
-		view.addSubview(collectionView)
+			
+		let searchView = SearchStackView(arrangedSubviews: [searchBar, collectionView])
+		setupStackView(stackView: searchView)
+		setupCollectionView()
+		
+		view.addSubview(searchView)
+		
+		self.getProducts(url: kProductsURL)
 	}
+}
+
+extension SearchViewController {
+	fileprivate func setupCollectionViewLayout() {
+		collectionView.backgroundColor = UIColor(red: 244/255,
+												 green: 245/255,
+												 blue: 247/255,
+												 alpha: 1)
+		
+		collectionView.snp.makeConstraints { make in
+			make.top.equalToSuperview().offset(100)
+			make.left.right.bottom.equalToSuperview()
+		}
+	}
+		
+	fileprivate func setupStackView(stackView: UIStackView) {
+		stackView.frame = self.view.bounds
+		stackView.axis = .vertical
+		stackView.distribution = .fill
+		stackView.spacing = 20
+	}
+}
+
+extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-		collectionView.frame = view.bounds
+	}
+	
+	fileprivate func setupCollectionView() {
+		collectionView.register(SearchCollectionViewCell.self,
+								forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
+		
+		collectionView.delegate = self
+		collectionView.dataSource = self
+		
+		setupCollectionViewLayout()
+
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -60,7 +98,7 @@ class SearchCollectionViewController: UIViewController, UICollectionViewDelegate
 	}
 }
 
-extension SearchCollectionViewController {
+extension SearchViewController {
 	
 	func getProducts(url: String) {
 		AF.request(url)
@@ -72,3 +110,4 @@ extension SearchCollectionViewController {
 		}
 	}
 }
+

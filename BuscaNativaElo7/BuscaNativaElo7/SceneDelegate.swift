@@ -9,9 +9,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		window?.makeKeyAndVisible()
 		
-//		let mainViewController = SearchCollectionViewController()
+		let mainViewController = SearchViewController()
 
-		let mainViewController = SearchBarViewController()
+//		let mainViewController = SearchBarViewController()
 		
 		window?.rootViewController = mainViewController
 	}

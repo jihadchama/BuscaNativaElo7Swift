@@ -5,7 +5,10 @@ class SearchBar: UIView {
 
 	lazy var containerView: UIView = {
 		let containerView = UIView()
-		containerView.backgroundColor = UIColor(red: 253/255, green: 185/255, blue: 51/255, alpha: 1)
+		containerView.backgroundColor = UIColor(red: 253/255,
+												green: 185/255,
+												blue: 51/255,
+												alpha: 1)
 		return containerView
 	}()
 	
@@ -25,7 +28,11 @@ class SearchBar: UIView {
 		let backButton = UIButton(type: .custom)
 		backButton.backgroundColor = UIColor(white: 1, alpha: 0)
 		backButton.setImage(UIImage(named: "back-button"), for: .normal)
-		backButton.imageEdgeInsets = UIEdgeInsets(top: 12.5, left: 3.5, bottom: 12.5, right: 3.5)
+		backButton.imageEdgeInsets = UIEdgeInsets(top: 12.5,
+												  left: 4.5,
+												  bottom: 12.5,
+												  right: 4.5)
+		
 		backButton.contentHorizontalAlignment = .fill
 		backButton.contentVerticalAlignment = .fill
 		return backButton
@@ -33,9 +40,7 @@ class SearchBar: UIView {
 
 	fileprivate func makeConstraints() {
 		containerView.snp.makeConstraints { make in
-			make.top.equalToSuperview()
-			make.right.equalToSuperview()
-			make.left.equalToSuperview()
+			make.top.right.left.equalToSuperview()
 			make.height.equalTo(100)
 		}
 		
@@ -56,12 +61,15 @@ class SearchBar: UIView {
 		
 	fileprivate func addSubviews() {
 		addSubview(containerView)
-		addSubview(searchTextField)
-		addSubview(backButton)
+		containerView.addSubview(searchTextField)
+		containerView.addSubview(backButton)
 	}
 	
 	fileprivate func paddingTextField(_ searchTextField: UITextField) {
-		searchTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: searchTextField.frame.height))
+		searchTextField.leftView = UIView(frame: CGRect(x: 0,
+														y: 0,
+														width: 5,
+														height: searchTextField.frame.height))
 		searchTextField.leftViewMode = .always
 	}
 		
