@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		8B0AE74325BF0DC000889DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE74225BF0DC000889DE7 /* AppDelegate.swift */; };
 		8B0AE74525BF0DC000889DE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE74425BF0DC000889DE7 /* SceneDelegate.swift */; };
-		8B0AE74725BF0DC000889DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE74625BF0DC000889DE7 /* ViewController.swift */; };
 		8B0AE74A25BF0DC000889DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AE74825BF0DC000889DE7 /* Main.storyboard */; };
 		8B0AE74C25BF0DC100889DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AE74B25BF0DC100889DE7 /* Assets.xcassets */; };
 		8B0AE74F25BF0DC100889DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0AE74D25BF0DC100889DE7 /* LaunchScreen.storyboard */; };
 		8B0AE75825BF0DF300889DE7 /* ProductCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */; };
 		8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */; };
+		8B2DEA4825C04265003D11E1 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2DEA4725C04265003D11E1 /* SearchBarViewController.swift */; };
 		8B61885F25BF221F00787062 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */; };
 		8B61886225BF234B00787062 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61886125BF234B00787062 /* ProductCard.swift */; };
+		8BEF001B25BF779000B6A7DE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF001A25BF779000B6A7DE /* SearchBar.swift */; };
+		8BEF002B25BF869900B6A7DE /* SearchCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF002A25BF869900B6A7DE /* SearchCollectionView.swift */; };
+		8BEF002F25BF884B00B6A7DE /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF002E25BF884B00B6A7DE /* SearchCollectionViewController.swift */; };
 		8EEF2A600C49719DE1A9F98A /* Pods_BuscaNativaElo7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7B29688DA28D9CB605EA89 /* Pods_BuscaNativaElo7.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,15 +30,18 @@
 		8B0AE73F25BF0DC000889DE7 /* BuscaNativaElo7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuscaNativaElo7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0AE74225BF0DC000889DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B0AE74425BF0DC000889DE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B0AE74625BF0DC000889DE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B0AE74925BF0DC000889DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B0AE74B25BF0DC100889DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0AE74E25BF0DC100889DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0AE75025BF0DC100889DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardModel.swift; sourceTree = "<group>"; };
 		8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
+		8B2DEA4725C04265003D11E1 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
 		8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B61886125BF234B00787062 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		8BEF001A25BF779000B6A7DE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		8BEF002A25BF869900B6A7DE /* SearchCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionView.swift; sourceTree = "<group>"; };
+		8BEF002E25BF884B00B6A7DE /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,16 +85,14 @@
 		8B0AE74125BF0DC000889DE7 /* BuscaNativaElo7 */ = {
 			isa = PBXGroup;
 			children = (
+				8BEF001925BF775E00B6A7DE /* ui */,
 				8B0AE75D25BF0F2400889DE7 /* model */,
 				8B0AE74225BF0DC000889DE7 /* AppDelegate.swift */,
 				8B0AE74425BF0DC000889DE7 /* SceneDelegate.swift */,
-				8B0AE74625BF0DC000889DE7 /* ViewController.swift */,
 				8B0AE74825BF0DC000889DE7 /* Main.storyboard */,
 				8B0AE74B25BF0DC100889DE7 /* Assets.xcassets */,
 				8B0AE74D25BF0DC100889DE7 /* LaunchScreen.storyboard */,
 				8B0AE75025BF0DC100889DE7 /* Info.plist */,
-				8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */,
-				8B61886125BF234B00787062 /* ProductCard.swift */,
 			);
 			path = BuscaNativaElo7;
 			sourceTree = "<group>";
@@ -100,6 +104,19 @@
 				8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		8BEF001925BF775E00B6A7DE /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF001A25BF779000B6A7DE /* SearchBar.swift */,
+				8B61886125BF234B00787062 /* ProductCard.swift */,
+				8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */,
+				8BEF002A25BF869900B6A7DE /* SearchCollectionView.swift */,
+				8BEF002E25BF884B00B6A7DE /* SearchCollectionViewController.swift */,
+				8B2DEA4725C04265003D11E1 /* SearchBarViewController.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		E66D8B91D489EE944D09E154 /* Pods */ = {
@@ -225,12 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0AE74725BF0DC000889DE7 /* ViewController.swift in Sources */,
 				8B0AE75825BF0DF300889DE7 /* ProductCardModel.swift in Sources */,
 				8B0AE74325BF0DC000889DE7 /* AppDelegate.swift in Sources */,
 				8B0AE74525BF0DC000889DE7 /* SceneDelegate.swift in Sources */,
 				8B61885F25BF221F00787062 /* SearchCollectionViewCell.swift in Sources */,
+				8BEF002B25BF869900B6A7DE /* SearchCollectionView.swift in Sources */,
+				8BEF001B25BF779000B6A7DE /* SearchBar.swift in Sources */,
+				8B2DEA4825C04265003D11E1 /* SearchBarViewController.swift in Sources */,
 				8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */,
+				8BEF002F25BF884B00B6A7DE /* SearchCollectionViewController.swift in Sources */,
 				8B61886225BF234B00787062 /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

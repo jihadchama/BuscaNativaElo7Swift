@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bolacha-arco-iris-bolacha.jpg",
+      "filename" : "Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Icon2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Icon3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

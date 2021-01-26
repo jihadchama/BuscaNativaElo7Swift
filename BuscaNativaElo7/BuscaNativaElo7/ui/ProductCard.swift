@@ -36,7 +36,7 @@ class ProductCard: UIView {
 		return label
 	}()
 	
-	fileprivate func constraints() {
+	fileprivate func makeConstraints() {
 		productImage.snp.makeConstraints { make in
 			make.left.equalToSuperview()
 			make.right.equalToSuperview()
@@ -89,7 +89,7 @@ class ProductCard: UIView {
 		
 		addShadowToProductCard()
 		addSubviews()
-		constraints()
+		makeConstraints()
 	}
 	
 	required init?(coder: NSCoder) {

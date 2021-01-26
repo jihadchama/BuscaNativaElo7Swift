@@ -2,14 +2,11 @@ import Alamofire
 import UIKit
 import SafariServices
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SearchCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
 	private var dataSource: [ProductCardModel] = []
 	
-	private let collectionView = UICollectionView(
-		frame: .zero,
-		collectionViewLayout: UICollectionViewFlowLayout()
-	)
+	private let collectionView = SearchCollectionView()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -63,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	}
 }
 
-extension ViewController {
+extension SearchCollectionViewController {
 	
 	func getProducts(url: String) {
 		AF.request(url)
