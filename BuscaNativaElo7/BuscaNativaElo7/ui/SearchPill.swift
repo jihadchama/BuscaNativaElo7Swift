@@ -21,12 +21,13 @@ class SearchPill: UIView {
 	
 	func makeConstraints() {
 		searchPill.snp.makeConstraints { make in
-			make.top.left.right.bottom.equalToSuperview()
-			make.size.equalTo(pillLabel)
+			make.width.equalTo(pillLabel.snp_width).offset(30)
+			make.height.equalTo(30)
 		}
 		
 		pillLabel.snp.makeConstraints { make in
 			make.center.equalTo(searchPill)
+			make.width.lessThanOrEqualToSuperview()
 		}
 	}
 	

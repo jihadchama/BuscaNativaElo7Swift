@@ -110,26 +110,23 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelega
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		
 		if collectionView == searchPillsCollectionView {
-			return CGSize(width: 100, height: 30)
+			let width = searchPillsDataSource[indexPath.item].title.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]).width
+			
+			return CGSize(width: width, height: 30)
 		}
 		return CGSize(width: 185, height: 286)
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		if collectionView == searchPillsCollectionView {
-			return 8
+			return 40
 		}
 		
 		return 10
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		if collectionView == searchPillsCollectionView {
-			return 8
-		}
-		
 		return 10
 	}
 
@@ -151,7 +148,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDelega
 		let webView = SFSafariViewController.init(url: URL(string: productURL)!)
 		self.present(webView, animated: true)
 	}
-		
+	
 	fileprivate func searchPillCollectionViewSetup() {
 		searchPillsCollectionView.register(SearchPillCollectionViewCell.self,
 										   forCellWithReuseIdentifier: SearchPillCollectionViewCell.identifier)
