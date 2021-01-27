@@ -18,6 +18,10 @@
 		8B55CCC325C09CA000B60F40 /* SearchStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55CCC225C09CA000B60F40 /* SearchStackView.swift */; };
 		8B61885F25BF221F00787062 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */; };
 		8B61886225BF234B00787062 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61886125BF234B00787062 /* ProductCard.swift */; };
+		8BE89DCA25C19D8300C02367 /* SearchPillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE89DC925C19D8300C02367 /* SearchPillCollectionViewCell.swift */; };
+		8BE89DCD25C19E3800C02367 /* SearchPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE89DCC25C19E3800C02367 /* SearchPill.swift */; };
+		8BE89DD025C1A45B00C02367 /* pills.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BE89DCF25C1A45B00C02367 /* pills.json */; };
+		8BE89DD325C1A4D000C02367 /* PillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE89DD225C1A4D000C02367 /* PillModel.swift */; };
 		8BEF001B25BF779000B6A7DE /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF001A25BF779000B6A7DE /* SearchBar.swift */; };
 		8BEF002F25BF884B00B6A7DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF002E25BF884B00B6A7DE /* SearchViewController.swift */; };
 		8EEF2A600C49719DE1A9F98A /* Pods_BuscaNativaElo7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7B29688DA28D9CB605EA89 /* Pods_BuscaNativaElo7.framework */; };
@@ -40,6 +44,10 @@
 		8B55CCC225C09CA000B60F40 /* SearchStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStackView.swift; sourceTree = "<group>"; };
 		8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B61886125BF234B00787062 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		8BE89DC925C19D8300C02367 /* SearchPillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPillCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BE89DCC25C19E3800C02367 /* SearchPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPill.swift; sourceTree = "<group>"; };
+		8BE89DCF25C1A45B00C02367 /* pills.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pills.json; sourceTree = "<group>"; };
+		8BE89DD225C1A4D000C02367 /* PillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillModel.swift; sourceTree = "<group>"; };
 		8BEF001A25BF779000B6A7DE /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		8BEF002E25BF884B00B6A7DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +101,7 @@
 				8B0AE74B25BF0DC100889DE7 /* Assets.xcassets */,
 				8B0AE74D25BF0DC100889DE7 /* LaunchScreen.storyboard */,
 				8B0AE75025BF0DC100889DE7 /* Info.plist */,
+				8BE89DCF25C1A45B00C02367 /* pills.json */,
 			);
 			path = BuscaNativaElo7;
 			sourceTree = "<group>";
@@ -102,6 +111,7 @@
 			children = (
 				8B0AE75725BF0DF300889DE7 /* ProductCardModel.swift */,
 				8B0AE75A25BF0EE800889DE7 /* PriceModel.swift */,
+				8BE89DD225C1A4D000C02367 /* PillModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -112,9 +122,11 @@
 				8BEF001A25BF779000B6A7DE /* SearchBar.swift */,
 				8B61886125BF234B00787062 /* ProductCard.swift */,
 				8B61885E25BF221F00787062 /* SearchCollectionViewCell.swift */,
+				8BE89DC925C19D8300C02367 /* SearchPillCollectionViewCell.swift */,
 				8BEF002E25BF884B00B6A7DE /* SearchViewController.swift */,
 				8B2DEA4725C04265003D11E1 /* SearchBarViewController.swift */,
 				8B55CCC225C09CA000B60F40 /* SearchStackView.swift */,
+				8BE89DCC25C19E3800C02367 /* SearchPill.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -189,6 +201,7 @@
 			files = (
 				8B0AE74F25BF0DC100889DE7 /* LaunchScreen.storyboard in Resources */,
 				8B0AE74C25BF0DC100889DE7 /* Assets.xcassets in Resources */,
+				8BE89DD025C1A45B00C02367 /* pills.json in Resources */,
 				8B0AE74A25BF0DC000889DE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,9 +257,12 @@
 			files = (
 				8B0AE75825BF0DF300889DE7 /* ProductCardModel.swift in Sources */,
 				8B0AE74325BF0DC000889DE7 /* AppDelegate.swift in Sources */,
+				8BE89DD325C1A4D000C02367 /* PillModel.swift in Sources */,
 				8B0AE74525BF0DC000889DE7 /* SceneDelegate.swift in Sources */,
 				8B61885F25BF221F00787062 /* SearchCollectionViewCell.swift in Sources */,
+				8BE89DCA25C19D8300C02367 /* SearchPillCollectionViewCell.swift in Sources */,
 				8B55CCC325C09CA000B60F40 /* SearchStackView.swift in Sources */,
+				8BE89DCD25C19E3800C02367 /* SearchPill.swift in Sources */,
 				8BEF001B25BF779000B6A7DE /* SearchBar.swift in Sources */,
 				8B2DEA4825C04265003D11E1 /* SearchBarViewController.swift in Sources */,
 				8B0AE75B25BF0EE800889DE7 /* PriceModel.swift in Sources */,
